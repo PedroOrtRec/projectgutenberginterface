@@ -1,0 +1,30 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+}
+
+.information {
+  background-color: white;
+  width: 20rem;
+  height: 40rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.information>figure{
+  height: 50%;
+  border: 1px solid rgb(0, 37, 62);
+}
+
+.information>a {
+  color: black;
+}

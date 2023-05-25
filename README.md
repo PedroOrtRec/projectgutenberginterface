@@ -1,5 +1,17 @@
 # GutenbergprojectUserinterface
 
+This is a small web application that I made during my internship at talentomobile. It consists of an interface for the gutendex api (https://gutendex.com/), which offers the data of all the books of the Project Gutenberg (https://www.gutenberg.org/).
+
+# What can you do?
+
+In the section titled Browser, you can see a paginated list with all the books. You can filter the list by keywords of the title and the author's name, by languages and by period of years during which the author was alive.
+
+# How will development continue?
+
+As an internship project, this application has many shortcomings. In the future I will be improving the verifications and the functioning of the form and the visual presentation of the list. Later, I will finish the rest of the informative sections. Finally I will add a user area where, connected to a backend, the user can record their favorite readings, pending readings, etc.
+
+# Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
 
 ## Development server

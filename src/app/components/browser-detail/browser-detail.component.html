@@ -1,0 +1,17 @@
+<section class="detail" *ngIf="bookDetail">
+  <h2 hidden>DETAIL</h2>
+  <div class="flex-container">
+    <article class="information">
+      <figure>
+        <img src="{{bookDetail.results[0].formats['image/jpeg']}}" alt="cover">
+      </figure>
+      <h3>{{bookDetail.results[0].title}}</h3>
+      <h4 *ngFor="let a of bookDetail.results[0].authors">{{a.name}} ({{a.birth_year}}-{{a.death_year}})</h4>
+      <p>Downloads: {{bookDetail.results[0].download_count}}</p>
+      <h5>Links</h5>
+      <a href="{{bookDetail.results[0].formats['text/plain']}}">Plain Text</a>
+      <a href="{{bookDetail.results[0].formats['text/html']}}">Html Text</a>
+      <a href="{{bookDetail.results[0].formats['application/epub+zip']}}">Download</a>
+    </article>
+  </div>
+</section>

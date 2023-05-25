@@ -1,0 +1,4 @@
+<main class="main-container">
+  <app-browser-list [result]="result" [arrayList]="arrayList" (eNext)="fNext()" (ePrevious)="fPrevious()"/>
+<app-browser-form (sendParams)="fBuildUrl($event)"></app-browser-form>
+</main>

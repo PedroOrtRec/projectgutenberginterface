@@ -1,0 +1,7 @@
+form {
+  margin: 6px;
+  margin-top: 2rem;
+}
+ul>li>label {
+  display: block;
+}

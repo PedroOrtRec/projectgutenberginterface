@@ -1,0 +1,78 @@
+.list {
+  margin-top: 6px;
+  margin-left: 6px;
+  width: 70vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgb(0, 37, 62);
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  width: 11rem;
+  height: 16rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1);
+  cursor: pointer;
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 2px rgb(255,255,255),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.card:active {
+  transition: 0.1s;
+  transform: translateY(0);
+  box-shadow: inset 0 -4em 3em rgba(0,0,0,0.1);
+}
+
+.card>figure {
+  height: 33%;
+  overflow: hidden;
+}
+
+.card>h4 {
+  margin-bottom: 1rem;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+}
+
+.navbar>.button{
+  width: 50%;
+}
+
+.navbar>.button>button{
+  margin: 2rem;
+  width: 6rem;
+  height: 2rem;
+  background-color: white;
+  border: 2px solid rgb(222, 222, 222);
+  cursor: pointer;
+}

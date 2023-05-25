@@ -1,0 +1,33 @@
+<section class="search">
+<form #f1="ngForm" (ngSubmit)="send()">
+  <h3>SEARCH SETTINGS</h3>
+  <ul>
+    <h4>Search by Keywords</h4>
+<li>
+  <label for="title">Title or author name</label>
+  <input type="text" id="title" name="title" [(ngModel)]="keyword">
+</li>
+<li>
+<label for="language">Language</label>
+<select name="language" id="language" [(ngModel)]="codeLanguage">
+  <option value="" selected>All</option>
+  <option  *ngFor="let l of languages" value="{{l.code}}">{{l.name}}</option>
+</select>
+</li>
+  <h4>Filter by Years</h4>
+  <p>You can find books through a range of years in which the author was alive.</p>
+<li>
+  <label for="yearStart">Period Start at</label>
+  <input type="number" id="yearStart" name="yearStart" min="-1105" max="2023" value={{yearStart}} [(ngModel)]="yearStart">
+</li>
+<li>
+  <label for="yearEnd">Period End at</label>
+  <input type="number" id="yearEnd" name="yearEnd" min="-1105" max="2023" value={{yearEnd}} [(ngModel)]="yearEnd">
+</li>
+<li>
+  <input type="submit" value="Send" class="styledButton">
+  <input type="reset" value="Reset" class="styledButton" (click)="send()">
+</li>
+  </ul>
+</form>
+</section>

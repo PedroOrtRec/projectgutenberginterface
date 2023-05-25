@@ -1,0 +1,41 @@
+<section class="list" *ngIf="result">
+  <h2 hidden>LIST</h2>
+  <div class="navbar">
+    <div class="button">
+    <button class="previous" (click)="fPrevious()" *ngIf="result.previous">PREV</button>
+  </div>
+  <div class="button">
+    <button class="next" (click)="fNext()" *ngIf="result.next">NEXT</button>
+  </div>
+  </div>
+  <div class="grid-container">
+    <article class="card" *ngFor="let b of arrayList"
+    [routerLink]="['/book', b.id]">
+      <figure>
+        <img src="{{b.formats['image/jpeg']}}" alt="cover">
+      </figure>
+      <h3>{{b.title.split(' ').length > 10 ?
+         b.title.split(' ').slice(0, 10).join(' ').concat('...')
+         : b.title}}</h3>
+      <h4 *ngFor="let a of b.authors">{{a.name}}</h4>
+    </article>
+  </div>
+  <div class="navbar">
+    <div class="button">
+    <button class="previous" (click)="fPrevious()" *ngIf="result.previous">PREV</button>
+  </div>
+  <div class="button">
+    <button class="next" (click)="fNext()" *ngIf="result.next">NEXT</button>
+  </div>
+  </div>
+</section>
+
+
+<!-- PORQUE AQUÍ HE HECHOO ROUTERLINK CON CORCHETES Y EN NAVBAR, QUE HE SEGUIDO LA DOCUMENTACIÓN, NO -->
+
+
+<!-- ¿NO HACE FALTA CONFIGURAR EL RUTAR PARA PODER PASAR EL PARAMETRO POR RUTA? -->
+
+<!-- ¿DEBERÍA EL PADRE DE ESTE COMPONENTE ENTERARSE DEL PASO DE INFORMACIÓN POR RUTA QUE ESTOY HACIENDO? -->
+
+<!-- (click)="fIdNum(b.id)" -->
